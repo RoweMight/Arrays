@@ -1,0 +1,22 @@
+books=[]
+    books.push("Hank")
+    books.push("American Story")
+    books.push("Black Cowboy ")
+    books.push("Enemy of the State")
+    books.push("Game of Thrones")
+
+
+puts books.join(" , ")
+
+puts"\n"
+
+puts books.shuffle.join(" , ")
+
+puts "\n"
+
+# books.pop
+# puts books.join(" , ")
+
+# books.pop
+# puts books.join(" , ")
+

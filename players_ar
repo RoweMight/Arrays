@@ -1,0 +1,76 @@
+class Player
+    attr_reader :health
+    attr_accessor :name
+
+
+    def initialize (name,health=100)
+        @name = name.capitalize
+        @health= health
+        end
+    
+    def score
+        @health +name.length
+        end
+    
+    def w00t
+        @health+=15
+        puts "#{@name} got w00ted"
+        end
+
+    def blam
+        @health-=10
+        puts "#{@name} got blammed!"
+        end
+
+    
+    def to_s
+        "Im #{@name} with a health of #{@health} and a score of #{score}."
+        end
+ end
+
+ player1= Player.new("larry",90)
+
+ player2=Player.new("moe")
+
+ player3 =Player.new("curly",125)
+ 
+ 
+puts "\n\n"
+
+players =[player1,player2,player3]      #Players array
+puts "There are #{players.size} players"
+
+# players.each do |player|
+#     puts player
+# end                            #these statements pass the imput through the array
+
+# players.each do |player|
+#     puts player.health
+# end
+
+players.each do |player|    
+    player.w00t
+    player.w00t
+    player.blam
+    puts player
+    puts "\n"
+    
+end
+
+# Removing from and adding to array
+players.pop 
+player4= Player.new("shemp",125)
+players.push(player4)
+
+players.each do |player|
+    player.w00t
+    player.w00t
+    player.blam
+    puts player
+    puts "\n"
+    
+end
+
+
+
+
